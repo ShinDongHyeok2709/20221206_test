@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>Document</title>
+
+    <style>
+      #box {
+        height: 200px;
+        width: 200px;
+        background-color: rgb(207, 207, 207);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box"></div>
+
+    <input type="button" value="red" onclick="bgRed()" />
+    <input type="button" value="yellow" onclick="bgYellow()" />
+    <input type="button" value="blue" onclick="bgBlue()" />
+
+    <p><input type="number" id="num" /> <button id="btn">change</button></p>
+  </body>
+
+  <script>
+    function bgRed() {
+      let box = document.getElementById("box");
+      box.style.backgroundColor = "red";
+    }
+
+    function bgYellow() {
+      let box = document.getElementById("box");
+      box.style.backgroundColor = "yellow";
+    }
+
+    function bgBlue() {
+      let box = document.getElementById("box");
+      box.style.backgroundColor = "blue";
+    }
+
+    let boxElem = document.getElementById("box");
+    let inputElem = document.getElementById("num");
+    let numBtn = document.getElementById("btn");
+
+    numBtn.addEventListener("click", function () {
+      boxElem.style.width = inputElem.value + "px";
+      boxElem.style.height = inputElem.value + "px";
+
+      console.log(inputElem.value);
+    });
+  </script>
+</html>
