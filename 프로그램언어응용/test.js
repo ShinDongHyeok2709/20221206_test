@@ -9,5 +9,11 @@ let userList = [
   { name: "Minseok", age: 43 },
 ];
 
+userList.map((item, index) => {
+  if (index >= 30) {
+    console.log(item);
+  }
+});
+
 let result = userList.filter;
 for (let i = 0; i > 30; i++) console.log(userList);
